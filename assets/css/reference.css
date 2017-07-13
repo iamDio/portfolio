@@ -1,0 +1,80 @@
+@keyframes blurred-bg {
+  0% {
+    -webkit-filter: blur(0px);
+  }
+  
+  100% {
+    -webkit-filter: blur(4px);
+  }
+}
+
+html,body { 
+  margin: 0;
+  width: 960px;
+margin: 0 auto;
+
+}
+
+html {
+  background: #FFF;
+  font-family: Helvetica,Arial,sans-serif;
+}
+header {
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  background: green;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.background-img {
+  background-image: url('http://unsplash.it/1200/400?image=1067');
+  background-size: cover;
+  background-position: bottom center;
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  z-index: 1;
+/*   -webkit-filter: blur(4px); */
+    -webkit-animation: blurred-bg 2s 1 forwards; 
+    box-sizing: border-box;
+}
+
+header > *:not(.background-img) {
+  z-index: 5;
+  position: relative;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 4px solid #FFF;
+}
+
+/* button {
+  border: 0;
+  padding: 10px 24px;
+  background: rgba(0,150,200,.6);
+  color: white;
+  font-size: 18px;
+  position: absolute !important;
+  right: 1rem;
+  bottom: 1rem;
+}
+ */
+.connectInfo {
+float: right;
+padding-right: 15px;
+}
+
+.projectBox {
+  border: 1px solid black;
+  width: 600px;
+  height: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
